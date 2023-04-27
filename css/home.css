@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* positioning the navigation bar at the top of the page */
+.navbar-section {
+  background-color:#e7530f; 
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+}
+
+/* organizing the anchor tags on the navigation bar*/
+header{
+ width:90%;
+ margin: 0 auto;
+ padding: 10px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+
+body{
+    height: 125vh;
+  
+}
+
+/* applying the gradient background animation */
+.main-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   height: 100%;
+   background: linear-gradient(-45deg, #ee7752, #e73c7e, #dd6d11, #e0470a);
+   background-size: 400% 400%;
+   animation: gradient 8s ease infinite;
+   
+}
+
+
+  
+  .game-title{
+    font-size:7em;
+    font-family: 'Poor Story', cursive;
+    margin-bottom: 1em;
+    background-image: url("../assets/texture1.gif");
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .sign-in{
+    display: inline-block;
+    font-family: 'Poor Story', cursive;
+    font-weight:900;
+    font-size: 2.5em;
+    color: #ececec;
+    border-radius: 40px;
+    padding: 0.4em 0.6em ;
+    transition: all 0.5s;
+    background-image: url("../assets/texture1.gif");
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 5px solid ; 
+  }
+
+  /* wrapper container to position the login and title in the center*/
+  .main-wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    text-align: center;
+   
+  }
+
+  .game-title-nav{
+    font-size:2em;
+    font-family: 'Poor Story', cursive;
+    color: antiquewhite;
+  }
+
+  .nav-sign-in{
+    border: 2px solid rgb(255, 255, 255);
+    padding: 0.5em;
+    border-radius: 15px;
+    transition: all 1s;
+    font-size: 1.2em;
+    height: 80%;
+    align-self: center;
+  }
+
+  .nav-sign-in:hover{
+    background-color: aliceblue;
+    color: #dd6d11;
+  }
+  
+  .link-container{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  a{ color: white;
+    text-decoration: none;
+    font-family: 'Poor Story', cursive;
+  }
+
+   /* increasing size of user icon on navigation bar */
+  .fa-user {
+    color: rgb(255, 255, 255);
+    width: 50px;
+    font-size: 25px;
+   
+  }
+
+
+  .sign-in:hover{
+    background-color: rgb(245, 215, 215);
+    border: 5px solid whitesmoke;
+    background-image: none;
+    font-size: 3em;
+    color: #e7530f;
+  }
+
+  /* positioning the footer at the bottom of the page */
+.footer {
+  padding: 10px;;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:#e7530f;
+  color: white;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+
+    /* background gradient animation*/
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+  /* jetpack animation*/
+  .jet > *{
+    animation: jets 20s linear infinite;
+    top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 900;
+	pointer-events: none;
+}
+@keyframes jets {
+  
+  0%{
+        transform: translate(0,60vh) rotate(35deg); ;opacity: 1;
+    }
+    25%{
+      transform: translate(25vw,-40vh);opacity: 1;}
+    50%{
+        transform: translate(50vw,50vw);opacity: 1;
+    }
+    75%{
+      transform: translate(75vw,-50vh) rotate(40deg); ;opacity: 1;}
+    100%{
+        transform: translate(100vw,80vh);opacity: 1;
+    }
+}
+
+
+/* rocket animation*/
+.rocket > *{
+  animation: rocket 12s linear infinite;
+  top: 0;
+left: 0;
+position: fixed;
+z-index: 999;
+pointer-events: none;
+}
+@keyframes rocket {
+  0%{
+      transform: translate(110vw,50vh) rotate(240deg);opacity: 0.8; 
+  }
+
+  50%{
+      transform: translate(-50vw,50vh) rotate(230deg); ;opacity: 0.8;
+  }
+  
+ 
+52%{
+  transform: translate(-60vw,50vh) rotate(230deg); ;opacity: 0.0;
+}
+
+60%{
+  transform: translate(110vw,50vh) rotate(240deg); ;opacity: 0;
+}
+  100%{
+      transform: translate(-10vw,-40vh) rotate(240deg); ;opacity: 1;
+  }
+}
+
+  /* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover 
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}*/
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.user-container{
+  display: flex;
+  gap: 15px;
+}
+
+#user-greeting{
+  display: inline-block;
+}

@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* positioning the navigation bar at the top of the page */
+.navbar-section {
+  background-color:#e7530f; 
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+}
+
+/* organizing the anchor tags on the navigation bar*/
+header{
+    width:90%;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body{
+    height: 100vh;
+}
+
+/* applying the gradient background animation */
+.main-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   height: 100%;
+   background: linear-gradient(-45deg, #ee7752, #e73c7e, #dd6d11, #e0470a);
+   background-size: 400% 400%;
+   animation: gradient 8s ease infinite;  
+}
+
+
+  
+
+/* applying a border to the sign up section */
+  .main-wrapper{
+    padding: 1em;
+     text-align: center;
+     border-style:solid;
+     border-color: #f76a29;
+     border-radius: 10px;
+     background-color: rgb(227, 221, 214);
+     opacity: 0.8;
+     width: 37%;
+  }
+
+  .game-title-nav{
+    font-size:1.5em;
+    font-family: 'Poppins', sans-serif;
+    color: antiquewhite;
+  }
+
+  .nav-sign-in{
+    border: 2px solid white;
+    padding: 0.5em;
+    border-radius: 15px;
+    transition: all 1s;
+    font-size: 1.2em;
+    height: 80%;
+    align-self: center;
+  }
+
+  .nav-sign-in:hover{
+    background-color: aliceblue;
+    color: #dd6d11;
+  }
+
+  .link-container{
+   
+    display: flex;
+    justify-content: space-around;
+  }
+
+  a{ color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* increasing the size of  the input elements */
+  input[type=text], input[type=password],input[type=email] {
+    width: 80%;
+    border-radius: 20px;
+    padding:12px 20px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    
+  }
+  
+  a{ color: white;
+    text-decoration: none;
+    font-family: 'Poor Story', cursive;
+  }
+  .game-title-nav{
+    font-size:2em;
+    font-family: 'Poor Story', cursive;
+    color: antiquewhite;
+  }
+
+  /* increasing size of user icon on navigation bar */
+  .fa-user {
+    color: rgb(255, 255, 255);
+    width: 50px;
+    font-size: 25px;
+    
+  }
+
+    /* centering button and preventing overflow */
+  .signup-btn {
+    display: block;
+    margin: 0 auto;
+   
+  }
+
+  
+  /* centering the login form section*/
+  .form-container {
+   flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-family: 'Poor Story', cursive;
+  }
+  .main-wrapper h1{
+    color: #e7530f;
+    font-family: 'Poor Story', cursive;
+    font-size: 4rem;
+  }
+  
+  /* positioning  username and password label to the left of the container */
+  label{
+    margin-top: 5px;
+    margin-left: 70px;
+    align-self: flex-start;
+  }
+
+  .form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .signup-btn{
+    border-style: none;
+    display: inline-block;
+    font-family: 'Poor Story', cursive;
+    font-weight: 800;
+    font-size: 1.5rem;
+    border: 2px solid #e7530f;
+    background-color: #e7530f;
+    color: #ececec;
+    border-radius: 10px;
+    padding: 0.6em 1.2em ;
+    margin-top: 20px;
+    transition: all 0.5s;
+  }
+
+  .signup-btn:hover{
+    background-color: rgb(245, 215, 215);
+    color: #e7530f;
+    
+  }
+
+  /* background gradient animation*/
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* positioning the footer at the bottom of the page */
+.footer {
+  padding: 10px;;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:#e7530f;
+  color: white;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#uname-check{
+  margin-left: 2em;
+  color: rgb(11, 240, 79);
+}
+
+#email-check,#pass-check,#credential-check{
+  font-size: 0.8rem;
+  margin-left: 2em;
+  color: rgb(255, 0, 0);
+}
+.user-container{
+  display: flex;
+  gap: 15px;
+}
+ /* Dropdown button */
+ .dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover 
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}*/
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.user-container{
+  display: flex;
+  gap: 15px;
+}
+
+#user-greeting{
+  display: inline-block;
+}
+
+#date{
+ width: 80%;
+ border-radius: 20px;
+padding: 12px 20px;
+margin: 4px 0;
+  
+}
